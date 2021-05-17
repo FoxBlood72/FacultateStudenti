@@ -21,6 +21,7 @@ class ExamType
 		friend std::ostream &operator<<(std::ostream &os, const ExamType &ex);
 		friend std::ofstream &operator<<(std::ofstream &os, const ExamType &ex);
 		friend std::istream &operator>>(std::istream &is, ExamType &ex);
+		ExamType operator=(ExamType &ex);
 		~ExamType();
 };
 

@@ -69,6 +69,16 @@ void Partial::outFile(std::ofstream &os) const
 	os<<this->nota_oral<<" ";
 }
 
+Partial Partial::operator =(Partial &ex)
+{
+	this->setExamId(ex.getExamId());
+	this->setNota(ex.getNota());
+	this->setElevId(ex.getElevId());
+	this->setData(ex.getData());
+	this->setExamType(ex.getExamType());
+	this->setNotaOral(ex.getNotaOral());
+}
+
 Partial Partial::operator=(Examen &ex)
 {
 	this->copyExam(ex);

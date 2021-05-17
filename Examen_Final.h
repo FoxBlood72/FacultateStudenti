@@ -21,6 +21,7 @@ class Examen_Final : public Partial
 		void citire(std::istream &is);
 		void outFile(std::ofstream &os) const;
 		Examen_Final operator=(Partial &ex);
+		Examen_Final operator=(Examen_Final &ex);
 		~Examen_Final();
 
 };

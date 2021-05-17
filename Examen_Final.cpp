@@ -57,6 +57,15 @@ Examen_Final Examen_Final::operator=(Partial &ex)
 	return *this;
 }
 
+Examen_Final Examen_Final::operator =(Examen_Final &ex)
+{
+	Examen *exbase = &ex;
+	this->copyExam(*exbase);
+	this->setNotaOral(ex.getNotaOral());
+	this->setExtraPoints(ex.getExtraPoints());
+	return *this;
+}
+
 void Examen_Final::setExtraPoints(float extra_points)
 {
 	this->extra_points = extra_points;

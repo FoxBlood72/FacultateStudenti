@@ -38,6 +38,7 @@ class Examen
 		virtual void citire(std::istream &is);
 		friend std::ofstream &operator<<(std::ofstream &os, const Examen &ex);
 		virtual void outFile(std::ofstream &os) const;
+		Examen operator=(Examen &ex);
 		~Examen();
 
 };

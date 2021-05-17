@@ -92,6 +92,16 @@ std::ofstream &operator<<(std::ofstream &os, const Examen &ex)
 	return os;
 } 
 
+Examen Examen::operator=(Examen &ex)
+{
+	this->setData(ex.getData());
+	this->setElevId(ex.getElevId());
+	this->setExamType(ex.getExamType());
+	this->setNota(ex.getNota());
+	this->setExamId(ex.getExamId());
+	return *this;
+}
+
 void Examen::afisare(std::ostream &os) const
 {
 	os<<"ID examen: "<<this->exam_id<<std::endl;

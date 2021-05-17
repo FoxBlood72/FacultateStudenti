@@ -62,6 +62,12 @@ std::istream &operator>>(std::istream &is, ExamType &ex)
 	return is;
 }
 
+ExamType ExamType::operator =(ExamType &ex)
+{
+	this->setName(ex.getName());
+	return *this;
+}
+
 int ExamType::nr_count = 0;
 
 ExamType::~ExamType()
